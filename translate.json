@@ -5,7 +5,8 @@
     "about": "à propos",
     "what_is": "C'est quoi Autoconnect ?",
     "lang_en": "Anglais",
-    "lang_fr": "Français"
+    "lang_fr": "Français",
+    "Controller_page": "Bienvenu sur la page de contrôle"
   },
     "en": {
         "title": "Autoconnect",
@@ -13,6 +14,8 @@
         "about": "about",
         "what_is": "What is Autoconnect?",
         "lang_en": "English",
-        "lang_fr": "French"
+        "lang_fr": "French",
+        "Controller_page": "Welcome to the control page"
+
     }
 }

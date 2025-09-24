@@ -5,10 +5,21 @@
     <title>Controller</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"/>
 </head>
 <body>
-<h1>Bienvenue sur la page Controller</h1>
+<h1 data-i18n="Controller_page"></h1>
 <p>Cette page est reliée au site principal.</p>
 <a href="/index.html">Retour à l’accueil</a>
+
+
+<div class="language-switch">
+    <label for="language-selector">Langue / Language:</label>
+    <select id="language-selector">
+        <option value="en" data-i18n="lang_en"></option>
+        <option value="fr" data-i18n="lang_fr"></option>
+    </select>
+</div>
+<script src="../lang.js"></script>
 </body>
 </html>
