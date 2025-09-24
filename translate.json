@@ -1,0 +1,18 @@
+{
+  "fr": {
+    "title": "Autoconnect",
+    "presentation": "présentation",
+    "about": "à propos",
+    "what_is": "C'est quoi Autoconnect ?",
+    "lang_en": "Anglais",
+    "lang_fr": "Français"
+  },
+    "en": {
+        "title": "Autoconnect",
+        "presentation": "presentation",
+        "about": "about",
+        "what_is": "What is Autoconnect?",
+        "lang_en": "English",
+        "lang_fr": "French"
+    }
+}

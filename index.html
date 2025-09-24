@@ -33,17 +33,17 @@
 <head>
 
     <div class="navbar">
-        <a href="#home">Autoconnect</a>
+        <a href="" data-i18n="title"></a>
         <div class="subnav">
-            <button class="subnavbtn">Présentation <i class="fa fa-caret-down"></i></button>
+            <button class="subnavbtn" data-i18n="presentation"><i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="#company">Company</a>
-                <a href="#team">Team</a>
-                <a href="#careers">Careers</a>
+                <a href="" data-i18n=""></a>
+                <a href="" data-i18n=""></a>
+                <a href="" data-i18n=""></a>
             </div>
         </div>
-        <a href="#news">Controller</a>
-        <a href="#contact">Contact</a>
+        <a href="" data-i18n=""></a>
+        <a href="" data-i18n=""></a>
     </div>
     <div style="padding:0 32px">
         <h3>Subnav/dropdown menu inside a Navigation Bar</h3>
@@ -52,7 +52,15 @@
 </head>
 
 
-<h3>C'est quoi Autoconnect ?</h3>
+<h3 data-i18n="what_is"></h3>
 
+<div class="language-switch">
+    <label for="language-selector">Langue / Language:</label>
+    <select id="language-selector">
+        <option value="en" data-i18n="lang_en"></option>
+        <option value="fr" data-i18n="lang_fr"></option>
+    </select>
+</div>
+<script src="/lang.js"></script>
 </body>
 </html>
