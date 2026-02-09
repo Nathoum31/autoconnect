@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller - Autoconnect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Controller Autoconnect - Pilotez votre véhicule à distance">
+    <meta name="author" content="Autoconnect">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/controller.css">
+
+    <script>
+        const LIEN_PAGE_ACCUEIL = "http://localhost:63342/autoconnect/autoconect%20test.html?_ijt=s1hpqfaqfs9siqrh6796tkiuht&_ij_reload=RELOAD_ON_SAVE#controller";
+    </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo" id="logoLink">
+            <i class="fas fa-car-side"></i>
+            Autoconnect
+        </a>
+        <a href="#" class="nav-link" id="navRetourLink">
+            <i class="fas fa-home"></i> Retour à l'accueil
+        </a>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-content">
+        <i class="fas fa-gamepad header-icon"></i>
+        <h1>Controller Autoconnect</h1>
+        <p>Pilotez votre véhicule avec précision et simplicité</p>
+    </div>
+</header>
+
+<!-- Section Tutoriel -->
+<section class="tutorial-section">
+    <div class="container">
+        <div class="section-header">
+            <i class="fas fa-play-circle"></i>
+            <h2>Tutoriel de mise en route</h2>
+        </div>
+        <p class="intro-text">
+            Découvrez comment mettre en marche le <strong>Controller</strong> et connecter votre <strong>voiture</strong> en quelques étapes simples.
+        </p>
+
+        <div class="video-container">
+            <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/61VYB08kBW0"
+                    title="Tutoriel Controller Autoconnect"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions-grid">
+            <div class="instruction-card">
+                <div class="step-number">1</div>
+                <i class="fas fa-wifi"></i>
+                <h3>Connexion</h3>
+                <p>Connectez votre controller au réseau WiFi</p>
+            </div>
+            <div class="instruction-card">
+                <div class="step-number">2</div>
+                <i class="fas fa-link"></i>
+                <h3>Appairage</h3>
+                <p>Appairez le controller avec votre véhicule</p>
+            </div>
+            <div class="instruction-card">
+                <div class="step-number">3</div>
+                <i class="fas fa-gamepad"></i>
+                <h3>Pilotage</h3>
+                <p>Utilisez les commandes pour piloter</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Controller -->
+<section class="controller-section">
+    <div class="container">
+        <div class="section-header">
+            <i class="fas fa-hand-pointer"></i>
+            <h2>Interface de contrôle</h2>
+        </div>
+        <p class="description">Utilisez les flèches directionnelles pour piloter votre véhicule</p>
+
+        <div class="console">
+            <!-- D-pad Gauche (Direction) -->
+            <div class="dpad left-dpad">
+                <div class="dpad-label">Direction</div>
+                <div class="middle-row">
+                    <button class="arrow left" data-dir="left" aria-label="Tourner à gauche">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="arrow right" data-dir="right" aria-label="Tourner à droite">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Écran virtuel -->
+            <div class="screen" id="virtualScreen">
+                <div class="screen-content">
+                    <i class="fas fa-circle status-indicator"></i>
+                    <p class="status-text">Prêt</p>
+                    <p class="command-text" id="commandDisplay">En attente de commande...</p>
+                </div>
+            </div>
+
+            <!-- D-pad Droit (Vitesse) -->
+            <div class="dpad right-dpad">
+                <div class="dpad-label">Vitesse</div>
+                <button class="arrow up" data-dir="up" aria-label="Accélérer">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+                <div class="middle-row">
+                    <button class="arrow down" data-dir="down" aria-label="Ralentir">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Debug Info -->
+        <div class="debug-info" id="debug"></div>
+    </div>
+</section>
+
+<!-- Section Caractéristiques -->
+<section class="features-section">
+    <div class="container">
+        <h2>Caractéristiques du controller</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-bolt"></i>
+                <h3>Réactivité</h3>
+                <p>Latence ultra-faible pour un contrôle précis</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Responsive</h3>
+                <p>Compatible tous appareils (PC, tablette, mobile)</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-signal"></i>
+                <h3>Connexion stable</h3>
+                <p>Technologie WiFi longue portée</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Sécurisé</h3>
+                <p>Connexion cryptée et sécurisée</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Autoconnect - Tous droits réservés</p>
+        <p class="footer-links">
+            <a href="#" id="footerAccueilLink"><i class="fas fa-home"></i> Accueil</a>
+            <a href="#" id="footerContactLink"><i class="fas fa-envelope"></i> Contact</a>
+        </p>
+    </div>
+</footer>
+
+<!-- Bouton retour flottant -->
+<a href="#" class="btn-retour" id="btnRetourFlottant" title="Retour à l'accueil">
+    <i class="fas fa-arrow-left"></i> Retour
+</a>
+
+<script>
+    // ============================================
+    // 📍 APPLICATION DES LIENS
+    // ============================================
+    // Cette partie applique automatiquement le lien configuré en haut du fichier
+    window.addEventListener('DOMContentLoaded', () => {
+        // Appliquer le lien à tous les éléments de retour
+        document.getElementById('logoLink').href = LIEN_PAGE_ACCUEIL;
+        document.getElementById('navRetourLink').href = LIEN_PAGE_ACCUEIL;
+        document.getElementById('footerAccueilLink').href = LIEN_PAGE_ACCUEIL;
+        document.getElementById('footerContactLink').href = LIEN_PAGE_ACCUEIL + "#contact";
+        document.getElementById('btnRetourFlottant').href = LIEN_PAGE_ACCUEIL;
+    });
+    // ============================================
+    // Gestion des commandes du controller
+    const arrows = document.querySelectorAll('.arrow');
+    const screen = document.getElementById('virtualScreen');
+    const commandDisplay = document.getElementById('commandDisplay');
+    const debug = document.getElementById('debug');
+
+    const commandTexts = {
+        up: 'Accélération',
+        down: 'Ralentissement',
+        left: 'Rotation gauche',
+        right: 'Rotation droite'
+    };
+
+    arrows.forEach(arrow => {
+        arrow.addEventListener('click', () => {
+            const dir = arrow.getAttribute('data-dir');
+            handleCommand(dir);
+        });
+
+        // Support du clavier
+        document.addEventListener('keydown', (e) => {
+            const keyMap = {
+                'ArrowUp': 'up',
+                'ArrowDown': 'down',
+                'ArrowLeft': 'left',
+                'ArrowRight': 'right'
+            };
+
+            if (keyMap[e.key]) {
+                e.preventDefault();
+                const button = document.querySelector(`[data-dir="${keyMap[e.key]}"]`);
+                button.classList.add('active');
+                handleCommand(keyMap[e.key]);
+            }
+        });
+
+        document.addEventListener('keyup', (e) => {
+            const keyMap = {
+                'ArrowUp': 'up',
+                'ArrowDown': 'down',
+                'ArrowLeft': 'left',
+                'ArrowRight': 'right'
+            };
+
+            if (keyMap[e.key]) {
+                const button = document.querySelector(`[data-dir="${keyMap[e.key]}"]`);
+                button.classList.remove('active');
+            }
+        });
+    });
+
+    function handleCommand(direction) {
+        // Affichage de la commande
+        commandDisplay.textContent = commandTexts[direction];
+        commandDisplay.style.color = '#10b981';
+
+        // Animation de l'écran
+        screen.style.boxShadow = 'inset 0 0 50px rgba(16, 185, 129, 0.3), 0 0 25px rgba(0,0,0,0.3)';
+
+        // Debug info
+        debug.textContent = `Commande envoyée: ${direction} à ${new Date().toLocaleTimeString()}`;
+
+        // Reset après 1 seconde
+        setTimeout(() => {
+            commandDisplay.textContent = 'En attente de commande...';
+            commandDisplay.style.color = '#cbd5e1';
+            screen.style.boxShadow = 'inset 0 0 30px rgba(255,255,255,0.1), 0 0 25px rgba(0,0,0,0.3)';
+        }, 1000);
+
+        // Ici vous pouvez ajouter le code pour envoyer la commande au véhicule
+        console.log('Commande:', direction);
+    }
+
+    // Animation de l'indicateur de statut
+    setInterval(() => {
+        const indicator = document.querySelector('.status-indicator');
+        indicator.style.opacity = indicator.style.opacity === '0.3' ? '1' : '0.3';
+    }, 1000);
+</script>
+
+</body>
+</html>
